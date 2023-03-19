@@ -5,11 +5,13 @@
     - [About the Dataset](#about-the-dataset)
     - [Tools Used](#tools-used)
     - [Description](#description)
-        - [Queries in Cloud SQL](#Queries-in-Cloud-SQL)
-        - [Queries and Data Visualizations in Vertex AI](#Queries-and-Data-Visualizations-in-Vertex-AI)
+        - [Training the Model](#Training-the-Model)
+        - [Evaluating the Model](#Evaluating-the-Model)
+        - [Making Predictions](#Making-Predictions)
 - [Results](#results) 
-    - [Cloud SQL Queries](#Cloud-SQL-Queries)
-    - [Vertex AI Queries and Data Visualizations](#Vertex-AI-Queries-and-Data-Visualizations)
+    - [Training the Model](#Training-the-Model)
+    - [Evaluating the Model](#Evaluating-the-Model)
+    - [Making Predictions](#Making-Predictions)
 - [Summary](#summary)
 - [Contact Information](#contact-information)
 
@@ -47,7 +49,7 @@ The machine learning model create din BigQuery using SQL consisted of training t
 
 
 
-<img style="width:60%" alt="query_gender" src="">
+<img style="width:60%" alt="query" src="">
 
 
 
