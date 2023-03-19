@@ -15,35 +15,39 @@
 
 ## Overview of the Analysis
 ### Purpose:
-This project runs queries on the 59 million records in the BigQuery public dataset New York Citibike, in addition to making data visualizations, using Cloud SQL (MySQL), Vertex AI, Cloud Shell, and Cloud Storage buckets in Google Cloud Platform (GCP).
+This project aims to analyze the Google Analytics dataset to predict whether a visitor will make a purchase when active on the website. The machine learning model has been created witin BigQuery in Google Cloud Platform (GCP), using SQL. 
 
 ### About the Dataset:
-The dataset is the NYC Citibike dataset taken from the public datasets available in BigQuery. The "citibike_trips" table used herein can be found under the "new_york_citibike" dataset on BigQuery, to be exact. The "citibike_trips" contains nearly 59 million records (58,937,715).
+The dataset is the Google Analytics dataset taken from the public datasets available in BigQuery. It contains data spanning web sessions for each day from August 01, 2016 till August 01, 2017. The dataset contains almost a million entries (903, 653 to be exact) - these entries each denote an active web session for a visitor to the website.
 
 ### Tools Used:
 * Google Cloud Platform (GCP) - BigQuery
 * SQL
 
 ### Description:
+The machine learning model create din BigQuery using SQL consisted of training the model, followed by evaluating the model,a nd finally making predictions for whether a visitor will make a purchase while active on the website or not. For the purposes of trainng, evaluating, and making predictions via the model, the first 9 months, following 2 months, and the last 1 month worth of data was used.
 
+#### Training the Model
 
-#### Queries in Cloud SQL
+#### Evaluating the Model
 
-
-#### Queries and Data Visualizations in Vertex AI
+#### Making Predictions
 
 
 ## Results
-### Cloud SQL Queries
 
-### Vertex AI Queries and Data Visualizations 
+### Training the Model
+
+### Evaluating the Model
+
+### Making Predictions
 
 * 
 
 
 
 
-<img style="width:60%" alt="query_gender" src="https://github.com/SohaT7/Bikeshire/blob/main/Resources/Images/query_gender.png">
+<img style="width:60%" alt="query_gender" src="">
 
 
 
