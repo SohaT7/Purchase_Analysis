@@ -37,15 +37,20 @@ Part one of this project runs multiple queries on the dataset to retrieve some g
 Queries were run on the dataset to calculate the percentage of purchasers versus non-purchasers, top 10 products by revenue, top 10 countries by visitors, and number of visitors by Channel Grouping (also referred to as simply "Channel" herein) type. 
 
 #### Percentage of Purchasers versus Non-Purchasers
-Subqueries were written for unique visitors, purchasers, and non-purchasers. Number of unique visitors were obtained by counting all distinct values for the fullVisitorId field. Number of purchasers were obtianed by counting all distinct fullVisitorId values where total transactions were not null. Conversely, number of non-purchasers were obtained by counting all distinct fullVisitorId vlaues where total transactions were null.
+Subqueries were written for unique visitors, purchasers, and non-purchasers. Number of unique visitors were obtained by COUNTing all DISTINCT values for the fullVisitorId field. Number of purchasers were obtianed by COUNTing all DISTINCT fullVisitorId values where total transactions were NOT NULL. Conversely, number of non-purchasers were obtained by counting all distinct fullVisitorId vlaues where total transactions were NULL.
 
 This was followed by running calculations using these new variables to get the percentage of purchasers and non-purchasers in our dataset.
 
 #### Top 10 Products by Revenue
+The top 10 products by revenue were found by first UNNESTing the Hits array and then UNNESTing the Products array to get the fields for product name, product quantity, and local product revenue. The result was then GROUPed BY product name, so as to give revenue against each particular product. Product revenue was then ORDERed BY a DESCending order. This gave a list of product names with their revenues listed in a descending order, i.e. the product with the largest revenue will be listed at the top.
 
 #### Top 10 Countries by Visitors
+The query written for the top 10 countries by visitors involved COUNTing all DISTINCT fullVisitorId values for each country (via GROUP BY), and then ordering the results in a descending order to list the country with the highest number of visitors at the top.
 
 #### Visitors by Channel 
+The query written for visitors by Channel Grouping involves COUNTing all DISTINCT fullVisitorId values for each Channel Grouping (via GROUP BY), and then ORDERing BY Channel Grouping in a descending order, so as to give the Channel Grouping type with the highest number of visitors at the top.
+
+<img style="width:100%" alt="visitors_channel" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/BQ_query_visitors_channel.png">
 
 ### Part TWO: Machine Learning Model
 The machine learning model created in BigQuery using SQL consisted of training the model, followed by evaluating the model, and finally making predictions for whether a visitor will make a purchase while active on the website or not. For the purposes of trainng, evaluating, and making predictions via the model, the first 9 months, following 2 months, and the last 1 month worth of data was used.
