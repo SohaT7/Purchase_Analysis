@@ -71,15 +71,29 @@ The duration for each iteration to run completely and the learning rate plotted 
 <img style="width:100%" alt="duration_learning_rate" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/Train_r2.png">
 
 #### Evaluating the Model
+The model was evaluated on two months' worth of data, and produced the following metrics:
+* precision
+* recall
+* accuracy
+* f1_score
+* log_loss
+* roc_auc 
+
+The ROC (Receiver Operating Characteristic) curve helps visualize the relationship between the false positive rate (predicted 'True' but actually is 'False') and the true positive rate (predicted 'True' and is actually 'True' as well). The roc_auc gives the area under curve for a model's performance. The more the area under curve, the better the model (i.e. the more close together are the predicted and actual values, meaning the model is more accurate). For the purposes of this evaluation, roc_auc was codified as shown below:
+
+
 
 #### Making Predictions
-
+The model was used to make predictions on the data from sessions spanning the last month. 
 
 ## Results
 
 ### Training the Model
 
 ### Evaluating the Model
+<img style="width:100%" alt="eval_results" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/Eval_r2.png">
+
+The roc_auc gives a value of 0.92 (i.e. 92%), which is "great" model performance. The model has an accuracy level of 95.5%.
 
 ### Making Predictions
 
