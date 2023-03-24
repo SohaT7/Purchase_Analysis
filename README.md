@@ -46,18 +46,21 @@ The features selected for the model were variables that seem to most closely rel
 <img style="width:60%" alt="query" src="">
 
 * trafficSource.isTrueDirect AS traffic_direct - 
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
+* trafficSource.medium AS traffic_medium - STRING - medium of the traffic, e.g. referral, organic, etc
+* trafficSource.source AS traffic_source - STRING - source of the traffic, e.g. hostname, search engine name, URL, etc
+* channelGrouping - STRING - default channel group for a visitor's session, e.g. organic search, paid search, display, social, etc
+* device.browser AS device_browser - 
+* device.deviceCategory AS device_category - STRING - type of device, e.g. mobile, desktop, or tablet
+* device.operatingSystem AS device_OS - 
+* geoNetwork.region AS region - STRING - region from which the session originated
+* totals.bounces AS bounces - INTEGER - total number of bounced sessions. Value for a bounced session is 1, and NULL otherwise
+* totals.newVisits AS new_visits - INTEGER - Total number of new users visiting in a session. Value is 1 for a new visit, and NULL otherwise
+* totals.pageviews AS page_views - INTEGER - Total number of page views in a session
+* totals.timeOnSite AS time_on_site - INTEGER - Total time of a session recorded in seconds 
+* trafficSource.adwordsClickInfo.gclId AS ad_id - 
+* trafficSource.adwordsClickInfo.isVideoAd AS ad_video - 
+* trafficSource.adwordsClickInfo.page AS ad_on_pg_num - 
+* trafficSource.adwordsClickInfo.slot AS ad_slot - 
 
 
 
