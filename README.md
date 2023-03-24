@@ -58,12 +58,17 @@ The features selected for the model were variables that seem to most closely rel
 * totals.pageviews AS page_views - INTEGER - Total number of page views in a session
 * totals.timeOnSite AS time_on_site - INTEGER - Total time of a session recorded in seconds 
 * trafficSource.adwordsClickInfo.gclId AS ad_id - STRING - Google Click ID 
-* trafficSource.adwordsClickInfo.isVideoAd AS ad_video - 
-* trafficSource.adwordsClickInfo.page AS ad_on_pg_num - 
-* trafficSource.adwordsClickInfo.slot AS ad_slot - 
+* trafficSource.adwordsClickInfo.isVideoAd AS ad_video - BOOLEAN - whether it is a video ad
+* trafficSource.adwordsClickInfo.page AS ad_on_pg_num - INTEGER - webpage number where the ad was displayed for the visitor to come across
+* trafficSource.adwordsClickInfo.slot AS ad_slot - STRING - position on the webpage where the ad was placed
 
+The performance of the "loss" metric while training the model can be seen below. Arounf the 5th iteration, loss has been minimized as much as possible, given the model specifics. 
 
+<img style="width:100%" alt="loss_function" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/Train_r1.png">
 
+The duration for each iteration to run completely and the learning rate plotted against each iteration are shown below:
+
+<img style="width:100%" alt="duration_learning_rate" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/Train_r2.png">
 
 #### Evaluating the Model
 
