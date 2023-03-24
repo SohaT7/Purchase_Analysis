@@ -5,13 +5,17 @@
     - [About the Dataset](#about-the-dataset)
     - [Tools Used](#tools-used)
     - [Description](#description)
-        - [Training the Model](#Training-the-Model)
-        - [Evaluating the Model](#Evaluating-the-Model)
-        - [Making Predictions](#Making-Predictions)
+        - [Part ONE: Running Queries](#Part-ONE-Running-Queries)
+        - [Part TWO: Machine Learning Model](#Part-TWO-Machine-Learning-Model)
+            - [Training the Model](#Training-the-Model)
+            - [Evaluating the Model](#Evaluating-the-Model)
+            - [Making Predictions](#Making-Predictions)
 - [Results](#results) 
-    - [Training the Model](#Training-the-Model)
-    - [Evaluating the Model](#Evaluating-the-Model)
-    - [Making Predictions](#Making-Predictions)
+        - [Part ONE: Running Queries](#Part-ONE-Running-Queries)
+        - [Part TWO: Machine Learning Model](#Part-TWO-Machine-Learning-Model)
+            - [Training the Model](#Training-the-Model)
+            - [Evaluating the Model](#Evaluating-the-Model)
+            - [Making Predictions](#Making-Predictions)
 - [Summary](#summary)
 - [Contact Information](#contact-information)
 
@@ -27,7 +31,21 @@ The dataset is the Google Analytics dataset taken from the public datasets avail
 * SQL
 
 ### Description:
-The machine learning model create din BigQuery using SQL consisted of training the model, followed by evaluating the model, and finally making predictions for whether a visitor will make a purchase while active on the website or not. For the purposes of trainng, evaluating, and making predictions via the model, the first 9 months, following 2 months, and the last 1 month worth of data was used.
+Part one of this project runs multiple queries on the dataset to retrieve some general information from Google Analytics. Part two of the project comprises of building a machine learning model to help predict whther a visitor will make a purchase while active on the website or not.
+
+### Part ONE: Running Queries
+Queries were run on the dataset to calculate the percentage of purchasers versus non-purchasers, top 10 products by revenue, top 10 countries by visitors, and number of visitors by Channel Grouping (also referred to as simply "Channel" herein) type. 
+
+#### Percentage of Purchasers versus Non-Purchasers
+
+#### Top 10 Products by Revenue
+
+#### Top 10 Countries by Visitors
+
+#### Visitors by Channel 
+
+### Part TWO: Machine Learning Model
+The machine learning model created in BigQuery using SQL consisted of training the model, followed by evaluating the model, and finally making predictions for whether a visitor will make a purchase while active on the website or not. For the purposes of trainng, evaluating, and making predictions via the model, the first 9 months, following 2 months, and the last 1 month worth of data was used.
 
 #### Training the Model
 Since our model aims to predict whether a visitor will make a purchase or not, we use logistic regression. To train the model, the first 9 months of data, from August 01, 2016 till April 30, 2017, was used. 
@@ -79,8 +97,10 @@ The ROC (Receiver Operating Characteristic) curve helps visualize the relationsh
 The model was used to make predictions on the data from sessions spanning the last month. It predicts whether a particular visitor will end up making a purchase on the website (given the value 1, otherwise 0) or not. 
 
 ## Results
+### Part ONE: Running Queries
+### Part TWO: Machine Learning Model
 
-### Training the Model
+#### Training the Model
 The performance of the "loss" metric while training the model can be seen below. Arounf the 5th iteration, loss has been minimized as much as possible, given the model specifics. 
 
 <img style="width:100%" alt="loss_function" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/Train_r1.png">
@@ -89,12 +109,12 @@ The duration for each iteration to run completely and the learning rate plotted 
 
 <img style="width:100%" alt="duration_learning_rate" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/Train_r2.png">
 
-### Evaluating the Model
+#### Evaluating the Model
 <img style="width:100%" alt="eval_results" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/Eval_r2.png">
 
 The roc_auc gives a value of 0.92 (i.e. 92%), which is "great" model performance. The model has an accuracy level of 95.5%.
 
-### Making Predictions
+#### Making Predictions
 Making predictions on the data produces 3 new fields:
 * predicted_purchased: whether the visitor makes a purchase (given the value of 1, and 0 otherwise)
 * predicted_purchased.label: the binary classifier ("1" for a purchase and "0" for no purchase)
