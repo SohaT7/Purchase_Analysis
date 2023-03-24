@@ -43,7 +43,7 @@ The variables used from the dataset thus far are given below:
 
 The features selected for the model were variables that seem to most closely relate to the activity of a purchase being made, and pertain to traffic type, browser type, device type, operating system, geographic location, activity on site, and advertisements. The list of features variables after formatting is given below, followed by a description of each:
 
-<img style="width:60%" alt="query" src="">
+<img style="width:60%" alt="variables_list" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/variables.png">
 
 * trafficSource.isTrueDirect AS traffic_direct - 
 * trafficSource.medium AS traffic_medium - STRING - medium of the traffic, e.g. referral, organic, etc
