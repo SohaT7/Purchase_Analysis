@@ -31,12 +31,15 @@ The dataset is the Google Analytics dataset taken from the public datasets avail
 * SQL
 
 ### Description:
-Part one of this project runs multiple queries on the dataset to retrieve some general information from Google Analytics. Part two of the project comprises of building a machine learning model to help predict whther a visitor will make a purchase while active on the website or not.
+Part one of this project runs multiple queries on the dataset to retrieve some general information from Google Analytics. Part two of the project comprises of building a machine learning model to help predict whther a visitor will make a purchase while active on the website or not. The relevant queries for each of these can be found in the [Queries folder](https://github.com/SohaT7/Purchase_Analysis/tree/main/Queries).
 
 ### Part ONE: Running Queries
 Queries were run on the dataset to calculate the percentage of purchasers versus non-purchasers, top 10 products by revenue, top 10 countries by visitors, and number of visitors by Channel Grouping (also referred to as simply "Channel" herein) type. 
 
 #### Percentage of Purchasers versus Non-Purchasers
+Subqueries were written for unique visitors, purchasers, and non-purchasers. Number of unique visitors were obtained by counting all distinct values for the fullVisitorId field. Number of purchasers were obtianed by counting all distinct fullVisitorId values where total transactions were not null. Conversely, number of non-purchasers were obtained by counting all distinct fullVisitorId vlaues where total transactions were null.
+
+This was followed by running calculations using these new variables to get the percentage of purchasers and non-purchasers in our dataset.
 
 #### Top 10 Products by Revenue
 
@@ -98,6 +101,15 @@ The model was used to make predictions on the data from sessions spanning the la
 
 ## Results
 ### Part ONE: Running Queries
+
+#### Percentage of Purchasers versus Non-Purchasers
+
+#### Top 10 Products by Revenue
+
+#### Top 10 Countries by Visitors
+
+#### Visitors by Channel 
+
 ### Part TWO: Machine Learning Model
 
 #### Training the Model
