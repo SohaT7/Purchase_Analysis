@@ -43,21 +43,21 @@ The variables used from the dataset thus far are given below:
 
 The features selected for the model were variables that seem to most closely relate to the activity of a purchase being made, and pertain to traffic type, browser type, device type, operating system, geographic location, activity on site, and advertisements. The list of features variables after formatting is given below, followed by a description of each:
 
-<img style="width:60%" alt="variables_list" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/variables.png">
+<img style="width:100%" alt="variables_list" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/variables.png">
 
-* trafficSource.isTrueDirect AS traffic_direct - 
+* trafficSource.isTrueDirect AS traffic_direct - BOOLEAN - whether the traffic was direct (i.e. visitor typed the name of website in browser or arrived via a previously bookmarked page) or not
 * trafficSource.medium AS traffic_medium - STRING - medium of the traffic, e.g. referral, organic, etc
 * trafficSource.source AS traffic_source - STRING - source of the traffic, e.g. hostname, search engine name, URL, etc
 * channelGrouping - STRING - default channel group for a visitor's session, e.g. organic search, paid search, display, social, etc
-* device.browser AS device_browser - 
+* device.browser AS device_browser - STRING - the browser used, e.g. Chrome or Firefox
 * device.deviceCategory AS device_category - STRING - type of device, e.g. mobile, desktop, or tablet
-* device.operatingSystem AS device_OS - 
+* device.operatingSystem AS device_OS - operating sustem of the device being used, e.g. Windows or Macintosh
 * geoNetwork.region AS region - STRING - region from which the session originated
 * totals.bounces AS bounces - INTEGER - total number of bounced sessions. Value for a bounced session is 1, and NULL otherwise
 * totals.newVisits AS new_visits - INTEGER - Total number of new users visiting in a session. Value is 1 for a new visit, and NULL otherwise
 * totals.pageviews AS page_views - INTEGER - Total number of page views in a session
 * totals.timeOnSite AS time_on_site - INTEGER - Total time of a session recorded in seconds 
-* trafficSource.adwordsClickInfo.gclId AS ad_id - 
+* trafficSource.adwordsClickInfo.gclId AS ad_id - STRING - Google Click ID 
 * trafficSource.adwordsClickInfo.isVideoAd AS ad_video - 
 * trafficSource.adwordsClickInfo.page AS ad_on_pg_num - 
 * trafficSource.adwordsClickInfo.slot AS ad_slot - 
