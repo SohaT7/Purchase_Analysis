@@ -73,10 +73,10 @@ The model was evaluated on two months' worth of data, and produced the following
 
 The ROC (Receiver Operating Characteristic) curve helps visualize the relationship between the false positive rate (predicted 'True' but actually is 'False') and the true positive rate (predicted 'True' and is actually 'True' as well). The roc_auc gives the area under curve for a model's performance. The more the area under curve, the better the model (i.e. the more close together are the predicted and actual values, meaning the model is more accurate). For the purposes of this evaluation, roc_auc was codified as shown below:
 
-<img style="width:60%" alt="roc_auc_code" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/eval_metrics.png">
+<img style="width:100%" alt="roc_auc_code" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/eval_metrics.png">
 
 #### Making Predictions
-The model was used to make predictions on the data from sessions spanning the last month. 
+The model was used to make predictions on the data from sessions spanning the last month. It predicts whether a particular visitor will end up making a purchase on the website (given the value 1, otherwise 0) or not. 
 
 ## Results
 
@@ -95,13 +95,14 @@ The duration for each iteration to run completely and the learning rate plotted 
 The roc_auc gives a value of 0.92 (i.e. 92%), which is "great" model performance. The model has an accuracy level of 95.5%.
 
 ### Making Predictions
+Making predictions on the data produces 3 new fields:
+* predicted_purchased: whether the visitor makes a purchase (given the value of 1, and 0 otherwise)
+* predicted_purchased.label: the binary classifier ("1" for a purchase and "0" for no purchase)
+* predicted_purchased.prob: the probability of the particular event occurring as predicted by the model
 
+<img style="width:60%" alt="predictions_0" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/Predict_r1.png">
 
-
-
-<img style="width:60%" alt="query" src="">
-
-
+<img style="width:60%" alt="predictions_1" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/Predict_r2.png">
 
 ## Summary
 
