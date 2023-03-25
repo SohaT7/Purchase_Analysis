@@ -48,8 +48,8 @@ The top 10 products by revenue were found by first UNNESTing the Hits array and 
 
 <img style="width:100%" alt="top10products" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/BQ_top10products.png">
 
-<img style="width:100%" alt="" src="">
-<img style="width:100%" alt="" src="">
+<img style="width:100%" alt="" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/plots/sql_top10products.png">
+<img style="width:100%" alt="" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/plots/table_top10products.png">
 <img style="width:100%" alt="" src="">
 <img style="width:100%" alt="" src="">
 
