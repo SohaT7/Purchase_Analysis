@@ -157,9 +157,9 @@ Making predictions on the data produces 3 new fields:
 * predicted_purchased.label: the binary classifier ("1" for a purchase and "0" for no purchase)
 * predicted_purchased.prob: the probability of the particular event occurring as predicted by the model
 
-<img style="width:100%" alt="predictions_0" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/Predict_r1.png">
+<img style="width:100%" alt="predictions_0" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/Predict_1.png">
 
-<img style="width:100%" alt="predictions_1" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/Predict_r2.png">
+<img style="width:100%" alt="predictions_1" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/Predict_2.png">
 
 ## Summary
 
