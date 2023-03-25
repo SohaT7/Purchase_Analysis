@@ -27,8 +27,13 @@ This project aims to analyze the Google Analytics dataset to predict whether a v
 The dataset is the Google Analytics dataset taken from the public datasets available in BigQuery. It contains data spanning web sessions for each day from August 01, 2016 till August 01, 2017. The dataset contains almost a million entries (903, 653 to be exact) - these entries each denote an active web session for a visitor to the website.
 
 ### Tools Used:
-* Google Cloud Platform (GCP) - BigQuery
+* Google Cloud Platform (GCP) - BigQuery, Vertex AI
 * SQL
+* Python
+* Vertex AI API
+* Notebooks API
+* Python Notebook
+* BigQuery Client
 
 ### Description:
 Part one of this project runs multiple queries on the dataset to retrieve some general information from Google Analytics. Part two of the project comprises of building a machine learning model to help predict whther a visitor will make a purchase while active on the website or not. The relevant queries for each of these can be found in the [Queries folder](https://github.com/SohaT7/Purchase_Analysis/tree/main/Queries).
