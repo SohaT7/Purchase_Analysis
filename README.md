@@ -70,7 +70,7 @@ The query written for visitors by Channel Grouping involves COUNTing all DISTINC
 The machine learning model created in BigQuery using SQL consisted of training the model, followed by evaluating the model, and finally making predictions for whether a visitor will make a purchase while active on the website or not. For the purposes of trainng, evaluating, and making predictions via the model, the first 9 months, following 2 months, and the last 1 month worth of data was used.
 
 #### Training the Model
-Since our model aims to predict whether a visitor will make a purchase or not, we use logistic regression. To train the model, the first 9 months of data, from August 01, 2016 till April 30, 2017, was used. 
+The [Train_query.sql file](https://github.com/SohaT7/Purchase_Analysis/blob/main/Queries/Train_query.sql) contains the SQL script which trains the model. Since our model aims to predict whether a visitor will make a purchase or not, we use logistic regression. To train the model, the first 9 months of data, from August 01, 2016 till April 30, 2017, was used. 
 
 The label created for the model was named 'purchased', and gives a value of 0 when no purchase was made and 1 if a purchase was made. This variable was codified to give a value of 1 if the total transactions made were greater than 0, and 0 if they eqauted to 0, followed by a GROUP BY on fullVisitorId.
 
@@ -103,7 +103,7 @@ The features selected for the model were variables that seem to most closely rel
 * trafficSource.adwordsClickInfo.slot AS ad_slot - STRING - position on the webpage where the ad was placed
 
 #### Evaluating the Model
-The model was evaluated on two months' worth of data, and produced the following metrics:
+The [Evaluate_query.sql file](https://github.com/SohaT7/Purchase_Analysis/blob/main/Queries/Evaluate_query.sql) contains the SQL script which evaluates the model created above. The model was evaluated on two months' worth of data, and produced the following metrics:
 * precision
 * recall
 * accuracy
@@ -116,7 +116,7 @@ The ROC (Receiver Operating Characteristic) curve helps visualize the relationsh
 <img style="width:100%" alt="roc_auc_code" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/eval_metrics.png">
 
 #### Making Predictions
-The model was used to make predictions on the data from sessions spanning the last month. It predicts whether a particular visitor will end up making a purchase on the website (given the value 1, otherwise 0) or not. 
+The [Predict_query.sql file](https://github.com/SohaT7/Purchase_Analysis/blob/main/Queries/Predict_query.sql) contians the SQL script to help the model make predictions on the remaining data. The model was used to make predictions on the data from sessions spanning the last month. It predicts whether a particular visitor will end up making a purchase on the website (given the value 1, otherwise 0) or not. 
 
 ## Results
 ### Part ONE: Running Queries
