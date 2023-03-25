@@ -36,19 +36,25 @@ Part one of this project runs multiple queries on the dataset to retrieve some g
 ### Part ONE: Running Queries
 Queries were run on the dataset to calculate the percentage of purchasers versus non-purchasers, top 10 products by revenue, top 10 countries by visitors, and number of visitors by Channel Grouping (also referred to as simply "Channel" herein) type. 
 
+Some queries were run in the BigQuery Editor while some were run in a Python notebook, using Vertex AI API and Notebooks API. To run a query within a notebook, Bigquery Client was used to send and receive messages from BigQuery. The data from the query was then displayed in a dataframe, and the table then pivoted to generate a bar plot.
+
 #### Percentage of Purchasers versus Non-Purchasers
 Subqueries were written for unique visitors, purchasers, and non-purchasers. Number of unique visitors were obtained by COUNTing all DISTINCT values for the fullVisitorId field. Number of purchasers were obtianed by COUNTing all DISTINCT fullVisitorId values where total transactions were NOT NULL. Conversely, number of non-purchasers were obtained by counting all distinct fullVisitorId vlaues where total transactions were NULL.
 
-This was followed by running calculations using these new variables to get the percentage of purchasers and non-purchasers in our dataset.
+This was followed by running calculations using these new variables to get the percentage of purchasers and non-purchasers in our dataset. The following query was run in the BigQuery Editor.
 
 <img style="width:100%" alt="purchasers_per" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/BQ_purchasers_per.png">
 
 #### Top 10 Products by Revenue
 The top 10 products by revenue were found by first UNNESTing the Hits array and then UNNESTing the Products array to get the fields for product name, product quantity, and local product revenue. The result was then GROUPed BY product name, so as to give revenue against each particular product. Product revenue was then ORDERed BY a DESCending order. This gave a list of product names with their revenues listed in a descending order, i.e. the product with the largest revenue will be listed at the top.
 
+The following query, and the subsequent code, was run in a Python notebook:
+
 <img style="width:70%" alt="" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/plots/sql_top10products.png">
 <img style="width:90%" alt="" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/plots/table_top10products.png">
 <img style="width:100%" alt="" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/plots/pivot_top10products.png">
+
+The plot generated via the above code can be seen under the "Results" section.
 
 #### Top 10 Countries by Visitors
 The query written for the top 10 countries by visitors involved COUNTing all DISTINCT fullVisitorId values for each country (via GROUP BY), and then ordering the results in a descending order to list the country with the highest number of visitors at the top.
@@ -117,19 +123,27 @@ The model was used to make predictions on the data from sessions spanning the la
 The results for the queries run earlier are given below.
 
 #### Percentage of Purchasers versus Non-Purchasers
+Out of a total of 714,167 visitors, there are 10,002 purchasers and 710,928 non-purchasers. This makes up to about 1.4% purchasers and 99.5% non-purchasers.
+
 <img style="width:100%" alt="r_purchasers_per" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/purchasers_percentage.png">
 
 #### Top 10 Products by Revenue
+The top 10 products by revenue are listed below. The product generating the highest revenue is "Google Men's Zip Hoodie".
+
 <img style="width:70%" alt="r_top10products" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/r_product_revenue.png">
 
 <img style="width:100%" alt="" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/plots/plot_top10products.png">
 
 #### Top 10 Countries by Visitors
+The top 10 countries by visitors are listed below. The country with the highest number of visitors is United States, with 251,830 visitors.
+
 <img style="width:50%" alt="r_top10countries" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/r_countries_visitors.png">
 
 <img style="width:100%" alt="" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/plots/plot_top10countries.png">
 
 #### Visitors by Channel 
+Number of visitors for each Channel Grouping are displayed below. Highest number of visitors, i.e. 311,607 visitors, reach the website through the Channel Grouping "Organic Search". This is followed by "Social" with 212,374 visitors and "Direct" with 109,830 visitors.
+
 <img style="width:50%" alt="r_visitors_channel" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/r_visitors_channel.png">
 
 <img style="width:100%" alt="" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/plots/plot_channel.png">
@@ -156,12 +170,14 @@ Making predictions on the data produces 3 new fields:
 * predicted_purchased.label: the binary classifier ("1" for a purchase and "0" for no purchase)
 * predicted_purchased.prob: the probability of the particular event occurring as predicted by the model
 
+Some example predictions are shown below:
+
 <img style="width:100%" alt="predictions_0" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/Predict_1.png">
 
 <img style="width:100%" alt="predictions_1" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/Predict_2.png">
 
 ## Summary
-
+This project explored the Google Analytics dataset in two parts. The first part comprised of running queries on the dataset to find the percentage of purchasers versus non-purchasers, top 10 products by revenue, top 10 countries by visitors, and channel grouping by visitors. The second part involved building a machine learning model in BigQuery which predicts whether a visitor on the website will make a purchase or not. The model has great performance with a roc_auc (Receiver Operating Characteristic Area Under Curve) value of 92% and an accuracy level of 95.5%.
 
 ## Contact Information
 Email: st.sohatariq@gmail.com
