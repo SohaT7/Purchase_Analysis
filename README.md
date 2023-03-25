@@ -46,8 +46,6 @@ This was followed by running calculations using these new variables to get the p
 #### Top 10 Products by Revenue
 The top 10 products by revenue were found by first UNNESTing the Hits array and then UNNESTing the Products array to get the fields for product name, product quantity, and local product revenue. The result was then GROUPed BY product name, so as to give revenue against each particular product. Product revenue was then ORDERed BY a DESCending order. This gave a list of product names with their revenues listed in a descending order, i.e. the product with the largest revenue will be listed at the top.
 
-<img style="width:100%" alt="top10products" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/BQ_top10products.png">
-
 <img style="width:100%" alt="" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/plots/sql_top10products.png">
 <img style="width:100%" alt="" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/plots/table_top10products.png">
 <img style="width:100%" alt="" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/plots/pivot_top10products.png">
@@ -58,12 +56,8 @@ The query written for the top 10 countries by visitors involved COUNTing all DIS
 
 <img style="width:100%" alt="top10countries" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/BQ_top10country.png">
 
-<img style="width:100%" alt="" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/plots/sql_top10countries.png">
-
 #### Visitors by Channel 
 The query written for visitors by Channel Grouping involves COUNTing all DISTINCT fullVisitorId values for each Channel Grouping (via GROUP BY), and then ORDERing BY Channel Grouping in a descending order, so as to give the Channel Grouping type with the highest number of visitors at the top.
-
-<img style="width:80%" alt="visitors_channel" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/BQ_query_visitors_channel.png">
 
 <img style="width:100%" alt="" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/plots/sql_channel.png">
 
