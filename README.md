@@ -48,15 +48,24 @@ The top 10 products by revenue were found by first UNNESTing the Hits array and 
 
 <img style="width:100%" alt="top10products" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/BQ_top10products.png">
 
+<img style="width:100%" alt="" src="">
+<img style="width:100%" alt="" src="">
+<img style="width:100%" alt="" src="">
+<img style="width:100%" alt="" src="">
+
 #### Top 10 Countries by Visitors
 The query written for the top 10 countries by visitors involved COUNTing all DISTINCT fullVisitorId values for each country (via GROUP BY), and then ordering the results in a descending order to list the country with the highest number of visitors at the top.
 
 <img style="width:100%" alt="top10countries" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/BQ_top10country.png">
 
+<img style="width:100%" alt="" src="">
+
 #### Visitors by Channel 
 The query written for visitors by Channel Grouping involves COUNTing all DISTINCT fullVisitorId values for each Channel Grouping (via GROUP BY), and then ORDERing BY Channel Grouping in a descending order, so as to give the Channel Grouping type with the highest number of visitors at the top.
 
 <img style="width:80%" alt="visitors_channel" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/BQ_query_visitors_channel.png">
+
+<img style="width:100%" alt="" src="">
 
 ### Part TWO: Machine Learning Model
 The machine learning model created in BigQuery using SQL consisted of training the model, followed by evaluating the model, and finally making predictions for whether a visitor will make a purchase while active on the website or not. For the purposes of trainng, evaluating, and making predictions via the model, the first 9 months, following 2 months, and the last 1 month worth of data was used.
@@ -120,11 +129,17 @@ The results for the queries run earlier are given below.
 #### Top 10 Products by Revenue
 <img style="width:70%" alt="r_top10products" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/r_product_revenue.png">
 
+<img style="width:100%" alt="" src="">
+
 #### Top 10 Countries by Visitors
 <img style="width:60%" alt="r_top10countries" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/r_countries_visitors.png">
 
+<img style="width:100%" alt="" src="">
+
 #### Visitors by Channel 
 <img style="width:60%" alt="r_visitors_channel" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/r_visitors_channel.png">
+
+<img style="width:100%" alt="" src="">
 
 ### Part TWO: Machine Learning Model
 
