@@ -118,13 +118,13 @@ The results for the queries run earlier are given below.
 <img style="width:100%" alt="r_purchasers_per" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/purchasers_percentage.png">
 
 #### Top 10 Products by Revenue
-<img style="width:100%" alt="r_top10products" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/r_product_revenue.png">
+<img style="width:70%" alt="r_top10products" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/r_product_revenue.png">
 
 #### Top 10 Countries by Visitors
-<img style="width:100%" alt="r_top10countries" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/r_countries_visitors.png">
+<img style="width:70%" alt="r_top10countries" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/r_countries_visitors.png">
 
 #### Visitors by Channel 
-<img style="width:100%" alt="r_visitors_channel" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/r_visitors_channel.png">
+<img style="width:60%" alt="r_visitors_channel" src="https://github.com/SohaT7/Purchase_Analysis/blob/main/Images/r_visitors_channel.png">
 
 ### Part TWO: Machine Learning Model
 
